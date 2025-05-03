@@ -7,7 +7,7 @@
 - [🛠 Especificaciones del Proyecto](#-especificaciones-del-proyecto)
 - [📦 Estructura del Proyecto](#-estructura-del-proyecto)
 - [📂 Detalle de Archivos por Módulo](#-detalle-de-archivos-por-módulo)
-- [🧠 Estructura del Núcleo Compartido (`core/`)](#-estructura-del-núcleo-compartido-core)
+- [🧠 Detalle de la carpeta Compartida (`core/`)](#-detalles-de-la-carpeta-compartida-core)
 - [🚀 Uso del Repositorio](#-uso-del-repositorio)
 - [🔁 Flujo de Trabajo en GitHub](#-flujo-de-trabajo-en-github)
 
@@ -63,14 +63,14 @@ Es la pantalla principal del módulo (interfaz gráfica). Aquí se manejan los e
     
         👉  Es la parte visual y de interacción del módulo.
 
-- `<Modulo>Repository.java`
+- `<Modulo>Repository.java` `(OPCIONAL)`
 
 Se encarga de acceder a la base de datos. Aquí van las consultas (SELECT, INSERT, UPDATE, DELETE) específicas del módulo.
     
         👉 Sirve como puente entre los datos de la base y el resto de la app.
 
   
-- `<Modulo>ViewModel.java`
+- `<Modulo>ViewModel.java` `(OPCIONAL)`
 
 Guarda y administra los datos que se muestran en la interfaz. También contiene lógica para preparar esos datos.
     
@@ -79,9 +79,9 @@ Guarda y administra los datos que se muestran en la interfaz. También contiene 
 
 ---
 
-## 🧠 Estructura del Núcleo Compartido (`core/`)
+## 🧠 Detalles de la carpeta compartida (`core/`)
 
-Contiene lo que es común y útil para todos los módulos, así no se repite el código.
+Esta carpeta/paquete contiene lo que es común y útil para todos los módulos, así no se repite el código, tenemos la siguiente estructura:
 
 - `core/database/DbConfig.java`
 
@@ -99,16 +99,8 @@ Aquí van funciones auxiliares que pueden necesitar varios módulos, como valida
 
 ## 🚀 Uso del Repositorio
 
-Link del repositorio oficial:  
+Link del repositorio:  
 🔗 [https://github.com/jeremyquinde/DAM-PROYECTO.git](https://github.com/jeremyquinde/DAM-PROYECTO.git)
-
-### Rama deberes
-La rama deberes contiene un proyecto que servira solo para realizar los deberes que se manden y evitar que estos interfieran con el proyecto principal.
-
-- `No usar el proyecto de esta rama para el desarrollo de sus modulos xddd`
-
-Link de la rama:
-https://github.com/jeremyquinde/DAM-PROYECTO/tree/deberes
 
 ### Clonar el proyecto
 
@@ -124,21 +116,21 @@ cd DAM-PROYECTO
 1. **Crea una rama para tu módulo**
 
 ```bash
-git checkout -b modulo-nombre_del_modulo
+git checkout -b modulo-nombre_de_tu_modulo
 ```
 
-Ejemplos:
+👉 Ejemplos:
 - `modulo-insumos`
 - `modulo-parcelas`
 
-2. **Trabaja solo en tu carpeta de módulo.** No modifiques otros archivos ni módulos.
+2. **Trabaja solo en tu módulo.** No modifiques otros archivos que no sean necesarios para tu modulo xd.
 
-3. **Guarda y sube tu progreso**
+3. **Guarda y sube tu modulo cuando ya este completo**
 
 ```bash
 git add .
-git commit -m "Avance módulo insumos"
-git push origin modulo-insumos
+git commit -m "Avance módulo (nombre de tu modulo)"
+git push origin modulo-(nombre de tu modulo)
 ```
 
 4. **Solicita Pull Request**  
