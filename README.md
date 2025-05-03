@@ -50,19 +50,23 @@ SiembraPro/
 
 
 - `<Modulo>.java`
+
 Representa los datos del módulo. Aquí se definen las clases con los atributos que el módulo necesita, por ejemplo: nombre, fecha, estado, etc.
     ➤  Sirve como un "molde" de los datos que se van a manejar en ese módulo.
     ➤  Si el modelo se comparte con otros módulos, va en core/model/.
 
 - `<Modulo>Activity.java`
+
 Es la pantalla principal del módulo (interfaz gráfica). Aquí se manejan los eventos del usuario, como hacer clic, escribir, navegar, etc.
     ➤  Es la parte visual y de interacción del módulo.
 
 - `<Modulo>Repository.java`
+
 Se encarga de acceder a la base de datos. Aquí van las consultas (SELECT, INSERT, UPDATE, DELETE) específicas del módulo.
     ➤ Sirve como puente entre los datos de la base y el resto de la app.
   
 - `<Modulo>ViewModel.java`
+
 Guarda y administra los datos que se muestran en la interfaz. También contiene lógica para preparar esos datos.
     ➤ Ayuda a separar la lógica de la vista, para que el código sea más limpio
 ---
