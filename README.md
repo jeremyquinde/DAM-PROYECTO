@@ -52,22 +52,27 @@ SiembraPro/
 - `<Modulo>.java`
 
 Representa los datos del módulo. Aquí se definen las clases con los atributos que el módulo necesita, por ejemplo: nombre, fecha, estado, etc.
+    
     ➤  Sirve como un "molde" de los datos que se van a manejar en ese módulo.
+    
     ➤  Si el modelo se comparte con otros módulos, va en core/model/.
 
 - `<Modulo>Activity.java`
 
 Es la pantalla principal del módulo (interfaz gráfica). Aquí se manejan los eventos del usuario, como hacer clic, escribir, navegar, etc.
+    
     ➤  Es la parte visual y de interacción del módulo.
 
 - `<Modulo>Repository.java`
 
 Se encarga de acceder a la base de datos. Aquí van las consultas (SELECT, INSERT, UPDATE, DELETE) específicas del módulo.
+    
     ➤ Sirve como puente entre los datos de la base y el resto de la app.
   
 - `<Modulo>ViewModel.java`
 
 Guarda y administra los datos que se muestran en la interfaz. También contiene lógica para preparar esos datos.
+    
     ➤ Ayuda a separar la lógica de la vista, para que el código sea más limpio
 ---
 
@@ -76,12 +81,15 @@ Guarda y administra los datos que se muestran en la interfaz. También contiene 
 Contiene lo que es común y útil para todos los módulos, así no se repite el código.
 
 - `core/database/DbConfig.java`
+
 Configura cómo conectarse a la base de datos.
 
 - `core/model/`
+
 Guarda los modelos de datos que son usados en varios módulos, como Usuario.java, Rol.java, etc. Para evitar duplicar modelos.
 
 - `core/utils/`
+
 Aquí van funciones auxiliares que pueden necesitar varios módulos, como validaciones.
 
 ---
@@ -93,6 +101,7 @@ Link del repositorio oficial:
 
 ### Rama deberes
 La rama deberes contiene un proyecto que servira solo para realizar los deberes que se manden y evitar que estos interfieran con el proyecto principal.
+
 - `No usar el proyecto de esta rama para el desarrollo de sus modulos xddd`
 
 Link de la rama:
